@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Security - Levelr</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #E5E7EB;
+            font-family: 'Inter', sans-serif;
+        }
+        .header-font { font-family: 'Montserrat', sans-serif; }
+        .tab-active {
+            color: #D4AF37; /* goldAccent */
+            border-bottom: 2px solid #D4AF37;
+        }
+        .card-bg {
+            background-color: #1A1A1A; /* cardDark */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .highlight-bg {
+            background-color: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .hidden-tab { display: none; }
+    </style>
+</head>
+<body class="min-h-screen">
 
+    <header class="sticky top-0 bg-black z-10 border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <button class="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <h1 class="header-font text-white text-lg font-bold">Privacy & Security</h1>
+            <div class="w-6"></div> </div>
+
+        <div class="max-w-5xl mx-auto flex justify-around text-sm font-semibold text-gray-500">
+            <button onclick="showTab('privacy')" id="btn-privacy" class="pb-2 px-2 tab-active transition-all">Privacy Policy</button>
+            <button onclick="showTab('cookie')" id="btn-cookie" class="pb-2 px-2 transition-all">Cookie Policy</button>
+            <button onclick="showTab('terms')" id="btn-terms" class="pb-2 px-2 transition-all">Terms</button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6 md:p-10">
+        
+        <div id="tab-privacy" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="header-font text-white font-bold mb-3">1. Introduction</h2>
+                <div class="card-bg p-5 rounded-xl text-sm leading-relaxed text-gray-300">
+                    Levelr Technologies Ltd ("Levelr", "we", "us", "our") is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, share, and protect your information when you use the Levelr platform, website, and related services (the "Platform").<br><br>
+                    By accessing or using the Platform, you agree to the collection and use of information in accordance with this Privacy Policy.
+                </div>
+            </div>
+
+            <div>
+                <h2 class="header-font text-white font-bold mb-3">2. Who We Are</h2>
+                <div class="card-bg p-5 rounded-xl text-sm leading-relaxed text-gray-300">
+                    Levelr is a gamified learning and rewards platform that enables students to earn points, rewards, and access discounts by participating in learning activities, events, and challenges.<br><br>
+                    <strong>Company name:</strong> Levelr Technologies Ltd<br>
+                    <strong>Contact email:</strong> support@levelrapp.com
+                </div>
+            </div>
+
+            <div>
+                <h2 class="header-font text-white font-bold mb-3">3. Information We Collect</h2>
+                <div class="card-bg p-5 rounded-xl text-sm leading-relaxed text-gray-300">
+                    <p class="font-bold mb-2">a. Information You Provide</p>
+                    <ul class="list-disc ml-5 space-y-1">
+                        <li>Name</li>
+                        <li>Email address</li>
+                        <li>Date of birth or age confirmation</li>
+                        <li>Educational institution or affiliation</li>
+                        <li>Account login details</li>
+                    </ul>
+                    <p class="font-bold mt-4 mb-2">b. Information Collected Automatically</p>
+                    <ul class="list-disc ml-5 space-y-1">
+                        <li>Device information (type, OS, browser)</li>
+                        <li>IP address and general location data</li>
+                        <li>Platform usage data (activities, rewards, progress)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="header-font text-white font-bold mb-3">4. How We Use Your Information</h2>
+                <div class="card-bg p-5 rounded-xl text-sm leading-relaxed text-gray-300">
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li>Create and manage user accounts</li>
+                        <li>Track learning activities and progress</li>
+                        <li>Award points, rewards, and achievements</li>
+                        <li>Provide access to discounts and partner offers</li>
+                        <li>Improve platform performance and user experience</li>
+                        <li>Monitor misuse, fraud, or violations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-cookie" class="hidden-tab grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="header-font text-white font-bold mb-3">1. Introduction</h2>
+                <div class="card-bg p-5 rounded-xl text-sm text-gray-300">
+                    Levelr Technologies Ltd uses cookies and similar tracking technologies to operate and improve the Levelr platform. By using the Platform, you consent to the use of cookies.
+                </div>
+            </div>
+            <div>
+                <h2 class="header-font text-white font-bold mb-3">2. What Are Cookies</h2>
+                <div class="card-bg p-5 rounded-xl text-sm text-gray-300">
+                    Cookies are small text files stored on your device. They help the Platform remember your preferences, analyse usage, and deliver personalised content.
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-terms" class="hidden-tab space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="header-font text-white font-bold mb-3">1. Introduction</h2>
+                    <div class="card-bg p-5 rounded-xl text-sm text-gray-300">
+                        These Terms and Conditions govern your use of the Levelr platform. By accessing or using the platform, you agree to comply with these Terms.
+                    </div>
+                </div>
+                <div>
+                    <h2 class="header-font text-white font-bold mb-3">2. Eligibility</h2>
+                    <div class="card-bg p-5 rounded-xl text-sm text-gray-300">
+                        Levelr is intended for users aged 16 and above. By registering, you confirm that you meet this minimum age requirement.
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="header-font text-[#D4AF37] font-bold mb-3">Affiliate Disclosure</h2>
+                <div class="highlight-bg p-5 rounded-xl text-sm leading-relaxed text-gray-300">
+                    Levelr participates in affiliate marketing programs and may earn commissions when users access, click, or redeem third-party offers through the platform. This disclosure is provided in accordance with applicable advertising regulations to ensure transparency.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.getElementById('tab-privacy').classList.add('hidden-tab');
+            document.getElementById('tab-cookie').classList.add('hidden-tab');
+            document.getElementById('tab-terms').classList.add('hidden-tab');
+
+            // Remove active styles from buttons
+            document.getElementById('btn-privacy').classList.remove('tab-active');
+            document.getElementById('btn-cookie').classList.remove('tab-active');
+            document.getElementById('btn-terms').classList.remove('tab-active');
+
+            // Show selected tab
+            document.getElementById('tab-' + tabName).classList.remove('hidden-tab');
+            document.getElementById('btn-' + tabName).classList.add('tab-active');
+        }
+    </script>
+</body>
+</html>
